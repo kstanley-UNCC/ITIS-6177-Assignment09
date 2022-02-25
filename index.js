@@ -5,7 +5,7 @@ const { query, validationResult } = require('express-validator');
 const app = express();
 app.use(express.json());
 
-app.use(
+app.get(
     '/',
     query('keyword')
         .isString().trim().isLength({max: 255})
